@@ -1,7 +1,1 @@
-const AboutPage = () => {
-	return (
-		<h1>About page</h1>
-	);
-};
-
-export default AboutPage;
+export { AboutPageAsync as AboutPage } from './ui/AboutPage.async'

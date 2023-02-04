@@ -20,6 +20,6 @@ export function buildWebpackConfig({ mode, paths, isDev, port }: BuildOptions): 
 		module: {
 			rules: buildLoaders(isDev),
 		},
-		resolve: buildResolvers(),
+		resolve: buildResolvers(paths),
 	};
 }

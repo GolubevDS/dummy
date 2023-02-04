@@ -1,15 +1,14 @@
-import { lazy, Suspense }      from 'react';
+import { Suspense }            from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 
-import { useTheme }   from './theme/useTheme';
-import { classNames } from './helpers/classNames';
+import { useTheme }   from 'app/providers/ThemeProvider/lib/useTheme';
+import { AboutPage }  from 'pages/AboutPage';
+import { MainPage }   from 'pages/MainPage';
+import { classNames } from 'shared/lib/helpers/classNames';
 
 import './styles/index.scss';
 
-const AboutPage = lazy(() => import('./pages/AboutPage'));
-const MainPage = lazy(() => import('./pages/MainPage'));
-
-const App = () => {
+export const App = () => {
 	const { theme, toggleTheme } = useTheme();
 
 	return (
@@ -28,5 +27,3 @@ const App = () => {
 		</div>
 	);
 };
-
-export default App;
