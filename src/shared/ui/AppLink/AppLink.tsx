@@ -4,7 +4,7 @@ import { classNames }      from 'shared/lib/helpers/classNames';
 
 import cls from './AppLink.module.scss';
 
-type AppLinkColor = 'primary' | 'secondary';
+type AppLinkColor = 'primary' | 'secondary' | 'text';
 
 interface AppLinkProps extends LinkProps {
 	className?: string;
@@ -15,7 +15,7 @@ export const AppLink: FC<AppLinkProps> = ({
 	className,
 	children,
 	to,
-	color = 'primary',
+	color = 'text',
 	...rest
 }: AppLinkProps) => {
 	return (

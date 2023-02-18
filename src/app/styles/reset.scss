@@ -8,11 +8,14 @@ html {
 	scroll-behavior: smooth;
 }
 
+a {
+	text-decoration: none;
+}
+
 input,
 button,
 textarea,
 select {
 	margin: 0;
-
 	font: inherit;
 }

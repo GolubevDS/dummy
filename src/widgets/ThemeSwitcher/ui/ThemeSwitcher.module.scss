@@ -1,2 +1,8 @@
 .ThemeSwitcher {
+	svg {
+		fill: var(--primary-color);
+		width: 32px;
+		height: 32px;
+		display: block;
+	}
 }
