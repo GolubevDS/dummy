@@ -2,7 +2,7 @@
 	height: calc(100vh - var(--navbar-height));
 	width: var(--sidebar-width);
 	border-right: 2px solid var(--border-color);
-	transition: width var(--transition-generally);
+	transition: width var(--transition-shared);
 	position: relative;
 }
 
@@ -14,6 +14,12 @@
 	position: absolute;
 	bottom: 24px;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	width: 100%;
+}
+
+.languageSwitcher {
+	margin-bottom: 16px;
 }
