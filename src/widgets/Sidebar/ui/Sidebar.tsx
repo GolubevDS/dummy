@@ -1,7 +1,7 @@
-import { useState }      from 'react';
-import { classNames }    from 'shared/lib/helpers/classNames';
+import { useState }         from 'react';
+import { classNames }       from 'shared/lib/helpers/classNames';
 import { LanguageSwitcher } from 'widgets/LanguageSwitcher';
-import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
+import { ThemeSwitcher }    from 'widgets/ThemeSwitcher';
 
 import cls from './Sidebar.module.scss';
 
@@ -10,11 +10,11 @@ interface SidebarProps {
 }
 
 export const Sidebar = ({ className }: SidebarProps) => {
-	const [collapsed, setCollapsed] = useState(false)
+	const [collapsed, setCollapsed] = useState(false);
 	
 	const toggle = () => {
-		setCollapsed(prev => !prev)
-	}
+		setCollapsed(prev => !prev);
+	};
 	
 	return (
 		<div className={classNames([cls.Sidebar, className], { [cls.collapsed]: collapsed })}>
