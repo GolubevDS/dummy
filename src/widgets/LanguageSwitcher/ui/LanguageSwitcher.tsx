@@ -3,8 +3,6 @@ import { Languages }      from 'shared/config/i18n';
 import { classNames }     from 'shared/lib/helpers/classNames';
 import { Button }         from 'shared/ui/Button';
 
-import cls from './LanguageSwitcher.module.scss';
-
 interface LangSwitcherProps {
 	className?: string;
 }
@@ -22,7 +20,7 @@ export const LanguageSwitcher = ({ className }: LangSwitcherProps) => {
 	
 	return (
 		<Button
-			className={classNames([cls.LanguageSwitcher, className])}
+			className={classNames([className])}
 			variant="text"
 			onClick={toggle}
 		>
