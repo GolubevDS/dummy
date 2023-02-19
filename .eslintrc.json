@@ -4,6 +4,11 @@
 		"ecmaVersion": "latest",
 		"sourceType": "module"
 	},
+	"env": {
+		"browser": true,
+		"es2021": true,
+		"jest": true
+	},
 	"plugins": [
 		"import",
 		"react",
