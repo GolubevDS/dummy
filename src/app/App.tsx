@@ -1,6 +1,6 @@
 import { Suspense }   from 'react';
-import { AppRouter }  from 'app/providers/router';
-import { useTheme }   from 'app/providers/theme/lib/useTheme';
+import { AppRouter }  from 'app/providers/AppRouter';
+import { useTheme }   from 'app/providers/ThemeProvider/lib/useTheme';
 import { Navbar }     from 'widgets/Navbar';
 import { Sidebar }    from 'widgets/Sidebar';
 import { classNames } from 'shared/lib/helpers/classNames';

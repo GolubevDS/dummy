@@ -2,6 +2,15 @@
 	cursor: pointer;
 }
 
+.contained {
+	color: var(--text-color);
+	background: var(--primary-color);
+	border-radius: 24px;
+	padding: 20px;
+	border: none;
+	outline: none;
+}
+
 .text {
 	color: var(--text-color);
 	padding: 0;

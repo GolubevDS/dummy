@@ -5,5 +5,7 @@
 	},
 	"language": "English",
 	"toggle": "Toggle",
-	"not-found": "Page not found"
+	"not-found": "Page not found",
+	"error": "An unexpected error has occurred",
+	"reload-page": "Reload page"
 }
