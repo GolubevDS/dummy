@@ -3,5 +3,7 @@
 		"main": "Главная",
 		"about": "О сайте"
 	},
-	"language": "Русский"
+	"language": "Русский",
+	"toggle": "Toggle",
+	"not-found": "Страница не найдена"
 }

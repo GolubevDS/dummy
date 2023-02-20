@@ -3,5 +3,7 @@
 		"main": "Main",
 		"about": "About"
 	},
-	"language": "English"
+	"language": "English",
+	"toggle": "Toggle",
+	"not-found": "Page not found"
 }
