@@ -15,7 +15,6 @@ i18n
 	.init({
 		fallbackLng: Languages.RU,
 		debug: __IS_DEV__,
-		
 		interpolation: {
 			escapeValue: false,
 		},
