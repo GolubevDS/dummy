@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
-import { Button }         from './Button';
+import { Button } from './Button';
 
 describe('Button', () => {
 	test('should render Button', () => {
@@ -8,8 +8,8 @@ describe('Button', () => {
 		expect(screen.getByText('foo')).toBeInTheDocument();
 	});
 	
-	test('should render Button with variant contained', () => {
-		render(<Button variant="contained">foo</Button>);
+	test('should render Button with variant outline', () => {
+		render(<Button variant="outline">foo</Button>);
 		expect(screen.getByText('foo')).toHaveClass('contained');
 	});
 });

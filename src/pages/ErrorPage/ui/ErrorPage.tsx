@@ -1,9 +1,10 @@
+import type { FC }        from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button }         from 'shared/ui/Button';
 
-import cls from './PageError.module.scss';
+import cls from './ErrorPage.module.scss';
 
-export const PageError = () => {
+export const ErrorPage: FC = () => {
 	const { t } = useTranslation();
 	
 	const reloadPage = () => {
@@ -11,8 +12,8 @@ export const PageError = () => {
 	};
 	
 	return (
-		<div className={cls.PageError}>
-			<p>{t('error')}</p>
+		<div className={cls.ErrorPage}>
+			<h2 className={cls.title}>{t('error')}</h2>
 			<Button onClick={reloadPage}>
 				{t('reload-page')}
 			</Button>

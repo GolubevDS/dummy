@@ -3,7 +3,7 @@ import { classNames }                    from 'shared/lib/helpers/classNames';
 
 import cls from './Button.module.scss';
 
-type ButtonVariants = 'text' | 'contained'
+type ButtonVariants = 'text' | 'outline'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	className?: string;
@@ -13,7 +13,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button: FC<ButtonProps> = ({
 	children,
 	className,
-	variant = 'contained',
+	variant = 'outline',
 	...rest
 }) => {
 	return (
