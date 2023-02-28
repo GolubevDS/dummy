@@ -13,11 +13,13 @@ i18n
 	.use(LanguageDetector)
 	.use(initReactI18next)
 	.init({
+		lng: 'ru',
 		fallbackLng: Languages.RU,
 		debug: __IS_DEV__,
 		interpolation: {
 			escapeValue: false,
 		},
+		resources: { ru: { translations: {} } },
 	});
 
 export default i18n;
