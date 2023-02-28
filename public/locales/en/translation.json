@@ -6,5 +6,6 @@
 	"language": "English",
 	"not-found": "Page not found",
 	"error": "An unexpected error has occurred",
-	"reload-page": "Reload page"
+	"reload-page": "Reload page",
+	"sidebar-switcher": "Toggle"
 }
