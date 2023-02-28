@@ -10,6 +10,6 @@ describe('Button', () => {
 	
 	test('should render Button with variant outline', () => {
 		render(<Button variant="outline">foo</Button>);
-		expect(screen.getByText('foo')).toHaveClass('contained');
+		expect(screen.getByText('foo')).toHaveClass('outline');
 	});
 });
