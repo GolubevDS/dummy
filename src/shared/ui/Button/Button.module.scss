@@ -2,11 +2,20 @@
 	cursor: pointer;
 }
 
+.contained {
+	color: var(--text-button-contained-color);
+	background: var(--primary-color);
+	border: none;
+	border-radius: 50px;
+	padding: 0.75em 1.5em;
+	outline: none;
+}
+
 .outline {
 	color: var(--primary-color);
 	border: 1px solid var(--primary-color);
-	border-radius: 24px;
-	padding: 12px 24px;
+	border-radius: 50px;
+	padding: 0.75em 1.5em;
 	outline: none;
 	background: none;
 }
@@ -17,4 +26,31 @@
 	border: none;
 	background: none;
 	outline: none;
+}
+
+.small {
+	font: var(--font-s);
+
+	svg {
+		height: var(--font-line-s);
+		width: var(--font-line-s);
+	}
+}
+
+.medium {
+	font: var(--font-m);
+
+	svg {
+		height: var(--font-line-m);
+		width: var(--font-line-m);
+	}
+}
+
+.large {
+	font: var(--font-l);
+
+	svg {
+		height: var(--font-line-l);
+		width: var(--font-line-l);
+	}
 }

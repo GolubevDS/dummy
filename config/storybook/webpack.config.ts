@@ -1,6 +1,6 @@
-import path    from 'node:path';
+import path from 'node:path';
 
-import webpack from 'webpack';
+import webpack                             from 'webpack';
 import type { Configuration, RuleSetRule } from 'webpack';
 
 import { buildCssLoader }  from '../webpack/loaders/buildCssLoader';

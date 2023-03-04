@@ -14,7 +14,8 @@
 		"react",
 		"react-hooks",
 		"i18next",
-		"@typescript-eslint"
+		"@typescript-eslint",
+		"align-import"
 	],
 	"extends": [
 		"plugin:import/recommended",
@@ -24,6 +25,8 @@
 		"plugin:i18next/recommended"
 	],
 	"rules": {
+		"no-multi-spaces": ["error", { "exceptions": { "ImportDeclaration": true } }],
+		"align-import/align-import": "error",
 		"react-hooks/exhaustive-deps": "warn",
 		"react-hooks/rules-of-hooks": "error",
 		"react/jsx-boolean-value": "warn",
@@ -80,6 +83,12 @@
 			"files": ["**/src/**/*.test.{ts,tsx}"],
 			"rules": {
 				"i18next/no-literal-string": "off"
+			}
+		},
+		{
+			"files": ["**/scripts/*.js"],
+			"rules": {
+				"@typescript-eslint/no-var-requires": "off"
 			}
 		}
 	]

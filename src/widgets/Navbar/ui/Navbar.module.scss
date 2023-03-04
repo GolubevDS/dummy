@@ -7,10 +7,12 @@
 	padding: 20px;
 }
 
-.links {
+.switchers {
 	margin-left: auto;
+	display: flex;
+	align-items: center;
 
-	:first-child {
-		margin-right: 15px;
+	& > :first-child {
+		margin-right: 24px;
 	}
 }

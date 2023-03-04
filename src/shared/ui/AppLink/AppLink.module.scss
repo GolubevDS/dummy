@@ -1,9 +1,21 @@
 .AppLink {
+	display: flex;
+	align-items: center;
 	transition: opacity var(--transition-shared);
+	font: var(--font-m);
+
+	svg {
+		height: var(--font-line-m);
+		width: var(--font-line-m);
+	}
 }
 
 .text {
 	color: var(--text-color);
+
+	svg {
+		fill: var(--text-color);
+	}
 
 	&:hover {
 		opacity: 0.5;

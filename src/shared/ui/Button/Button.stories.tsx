@@ -12,6 +12,19 @@ export default {
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
+export const Contained = Template.bind({});
+Contained.args = {
+	variant: 'contained',
+	children: 'Button',
+};
+
+export const ContainedDark = Template.bind({});
+ContainedDark.args = {
+	variant: 'contained',
+	children: 'Button',
+};
+ContainedDark.decorators = [ThemeDecorator(Themes.DARK)];
+
 export const Outline = Template.bind({});
 Outline.args = {
 	variant: 'outline',
@@ -37,3 +50,21 @@ TextDark.args = {
 	children: 'Button',
 };
 TextDark.decorators = [ThemeDecorator(Themes.DARK)];
+
+export const SizeS = Template.bind({});
+SizeS.args = {
+	size: 'small',
+	children: 'Button',
+};
+
+export const SizeM = Template.bind({});
+SizeM.args = {
+	size: 'medium',
+	children: 'Button',
+};
+
+export const SizeL = Template.bind({});
+SizeL.args = {
+	size: 'large',
+	children: 'Button',
+};

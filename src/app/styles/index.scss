@@ -12,9 +12,12 @@
 
 .content-page {
 	display: flex;
+
+	& > *:last-child {
+		flex-grow: 1;
+	}
 }
 
 .page-wrapper {
-	flex-grow: 1;
-	padding: 20px;
+	padding: 24px;
 }
