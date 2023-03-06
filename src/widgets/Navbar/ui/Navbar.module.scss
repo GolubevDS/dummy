@@ -11,8 +11,9 @@
 	margin-left: auto;
 	display: flex;
 	align-items: center;
+	margin-right: 24px;
+}
 
-	& > :first-child {
-		margin-right: 24px;
-	}
+.languageSwitcher {
+	margin-right: 24px;
 }
