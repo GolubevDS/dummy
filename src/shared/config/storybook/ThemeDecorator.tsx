@@ -1,9 +1,9 @@
-import { Story }  from '@storybook/react';
-import { Themes } from 'app/providers/ThemeProvider';
+import { Story }                 from '@storybook/react';
+import { ThemeProvider, Themes } from 'app/providers/ThemeProvider';
 
 // eslint-disable-next-line react/display-name
 export const ThemeDecorator = (theme: Themes) => (StoryComponent: Story) => (
-	<div className={`app ${theme}`}>
+	<ThemeProvider initialTheme={theme}>
 		<StoryComponent />
-	</div>
+	</ThemeProvider>
 );

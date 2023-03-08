@@ -1,19 +1,22 @@
 import React                                  from 'react';
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
-import { ThemeDecorator }                     from 'shared/config/storybook/ThemeDecorator';
 import { Themes }                             from 'app/providers/ThemeProvider';
+import { ThemeDecorator }                     from 'shared/config/storybook/ThemeDecorator';
 
 import { Modal } from './Modal';
 
 export default {
 	title: 'shared/Modal',
 	component: Modal,
-	args: {
-		isPortal: false,
-	},
 } as ComponentMeta<typeof Modal>;
 
-const Template: ComponentStory<typeof Modal> = (args) => <Modal {...args} />;
+const Template: ComponentStory<typeof Modal> = (args) => (
+	<div className="app light">
+		<div className="app light">
+			<Modal {...args} />
+		</div>
+	</div>
+);
 
 export const Light = Template.bind({});
 Light.args = {

@@ -10,7 +10,6 @@ interface ModalProps {
 	className?: string;
 	isOpen?: boolean;
 	onClose?: () => void;
-	isPortal?: boolean;
 }
 
 const ANIMATION_DELAY = 15;
@@ -20,7 +19,6 @@ export const Modal: FC<ModalProps> = ({
 	className,
 	isOpen = false,
 	onClose,
-	isPortal = true,
 }) => {
 	const [isClosing, setIsClosing] = useState(false);
 	const timerRef = useRef<ReturnType<typeof setTimeout>>();
@@ -61,19 +59,15 @@ export const Modal: FC<ModalProps> = ({
 		[cls.isClosing]: isClosing,
 	};
 	
-	const render = () => (
-		<div className={classNames([cls.Modal, className], mods)}>
-			<div className={cls.overlay} onClick={closeHandler}>
-				<div className={cls.content} onClick={handleContentClick}>
-					{children}
+	return (
+		<Portal>
+			<div className={classNames([cls.Modal, className], mods)}>
+				<div className={cls.overlay} onClick={closeHandler}>
+					<div className={cls.content} onClick={handleContentClick}>
+						{children}
+					</div>
 				</div>
 			</div>
-		</div>
-	);
-	
-	return isPortal ? (
-		<Portal>
-			{render()}
 		</Portal>
-	) : render();
+	);
 };
