@@ -25,7 +25,16 @@
 		"plugin:i18next/recommended"
 	],
 	"rules": {
-		"no-multi-spaces": ["error", { "exceptions": { "ImportDeclaration": true } }],
+		"no-multi-spaces": [
+			"error",
+			{
+				"exceptions": {
+					"ImportDeclaration": true,
+					"VariableDeclarator": true,
+					"Property": true
+				}
+			}
+		],
 		"align-import/align-import": "error",
 		"react-hooks/exhaustive-deps": "warn",
 		"react-hooks/rules-of-hooks": "error",

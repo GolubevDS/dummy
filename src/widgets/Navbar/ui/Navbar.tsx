@@ -1,8 +1,8 @@
 import { useCallback, useState } from 'react';
 import type { FC }               from 'react';
 import { useTranslation }        from 'react-i18next';
+import { LoginModal }            from 'features/AuthByUsername';
 import { Button }                from 'shared/ui/Button';
-import { Modal }                 from 'shared/ui/Modal';
 import { LanguageSwitcher }      from 'widgets/LanguageSwitcher';
 import { ThemeSwitcher }         from 'widgets/ThemeSwitcher';
 
@@ -25,10 +25,7 @@ export const Navbar: FC = () => {
 			<Button onClick={onToggleModal}>
 				{t('Войти')}
 			</Button>
-			<Modal isOpen={isAuthModal} onClose={onToggleModal}>
-				{/* eslint-disable-next-line */}
-				{t('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam.')}
-			</Modal>
+			<LoginModal isOpen={isAuthModal} onClose={onToggleModal} />
 		</div>
 	);
 };

@@ -7,5 +7,8 @@
 	"not-found": "Page not found",
 	"error": "An unexpected error has occurred",
 	"reload-page": "Reload page",
-	"sidebar-switcher": "Toggle"
+	"sidebar-switcher": "Toggle",
+	"sign-in": "Sign in",
+	"username": "Username",
+	"password": "Password"
 }

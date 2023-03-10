@@ -1,0 +1,15 @@
+.LoginForm {
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	max-width: 100%;
+}
+
+.input {
+	margin-top: 12px;
+}
+
+.signInBtn {
+	margin-top: 16px;
+	margin-left: auto;
+}
