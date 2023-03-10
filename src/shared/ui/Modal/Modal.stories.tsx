@@ -11,7 +11,7 @@ export default {
 } as ComponentMeta<typeof Modal>;
 
 const Template: ComponentStory<typeof Modal> = (args) => (
-	<div className="app">
+	<div id="root">
 		<Modal {...args} />
 	</div>
 );
