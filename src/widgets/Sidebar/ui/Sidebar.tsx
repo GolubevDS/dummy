@@ -1,14 +1,15 @@
 import { useState }       from 'react';
 import type { FC }        from 'react';
 import { useTranslation } from 'react-i18next';
-import { AppLink }        from 'shared/ui/AppLink';
-import { classNames }     from 'shared/lib/helpers/classNames';
-import { Button }         from 'shared/ui/Button';
-import About              from 'shared/assets/icons/about.svg';
-import ArrowBack          from 'shared/assets/icons/arrow-back.svg';
-import ArrowForward       from 'shared/assets/icons/arrow-forward.svg';
-import Logo               from 'shared/assets/icons/logo.svg';
-import Home               from 'shared/assets/icons/home.svg';
+
+import About          from 'shared/assets/icons/about.svg';
+import ArrowBack      from 'shared/assets/icons/arrow-back.svg';
+import ArrowForward   from 'shared/assets/icons/arrow-forward.svg';
+import Home           from 'shared/assets/icons/home.svg';
+import Logo           from 'shared/assets/icons/logo.svg';
+import { classNames } from 'shared/lib/helpers/classNames';
+import { AppLink }    from 'shared/ui/AppLink';
+import { Button }     from 'shared/ui/Button';
 
 import cls from './Sidebar.module.scss';
 

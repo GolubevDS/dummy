@@ -1,70 +1,71 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Themes }                             from 'app/providers/ThemeProvider';
 import React                                  from 'react';
-import { ThemeDecorator }                     from 'shared/config/storybook/ThemeDecorator';
+
+import { Themes }         from 'app/providers/ThemeProvider';
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator';
 
 import { Button } from './Button';
 
 export default {
 	title: 'shared/Button',
 	component: Button,
+	args: {
+		style: { display: 'block', marginBottom: '1.5em' },
+	},
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const Contained = Template.bind({});
-Contained.args = {
-	variant: 'contained',
-	children: 'Button',
+export const Default = Template.bind({});
+Default.args = {
+	children: 'Click me!',
 };
 
-export const ContainedDark = Template.bind({});
-ContainedDark.args = {
-	variant: 'contained',
-	children: 'Button',
+export const Dark = Template.bind({});
+Dark.args = {
+	children: 'Click me!',
 };
-ContainedDark.decorators = [ThemeDecorator(Themes.DARK)];
+Dark.decorators = [ThemeDecorator(Themes.DARK)];
 
-export const Outline = Template.bind({});
-Outline.args = {
-	variant: 'outline',
-	children: 'Button',
-};
-
-export const OutlineDark = Template.bind({});
-OutlineDark.args = {
-	variant: 'outline',
-	children: 'Button',
-};
-OutlineDark.decorators = [ThemeDecorator(Themes.DARK)];
-
-export const Text = Template.bind({});
-Text.args = {
-	variant: 'text',
-	children: 'Button',
+export const Variants: ComponentStory<typeof Button> = (args) => (
+	<>
+		<Button {...args} variant="contained">
+			Contained
+		</Button>
+		<Button {...args} variant="outline">
+			Outline
+		</Button>
+		<Button {...args} variant="text">
+			Text
+		</Button>
+	</>
+);
+Variants.argTypes = {
+	variant: { table: { disable: true } },
 };
 
-export const TextDark = Template.bind({});
-TextDark.args = {
-	variant: 'text',
-	children: 'Button',
-};
-TextDark.decorators = [ThemeDecorator(Themes.DARK)];
-
-export const SizeS = Template.bind({});
-SizeS.args = {
-	size: 'small',
-	children: 'Button',
-};
-
-export const SizeM = Template.bind({});
-SizeM.args = {
-	size: 'medium',
-	children: 'Button',
+export const Sizes: ComponentStory<typeof Button> = (args) => (
+	<>
+		<Button {...args} size="large">
+			Large
+		</Button>
+		<Button {...args} size="medium">
+			Medium
+		</Button>
+		<Button {...args} size="small">
+			Small
+		</Button>
+	</>
+);
+Sizes.argTypes = {
+	size: { table: { disable: true } },
 };
 
-export const SizeL = Template.bind({});
-SizeL.args = {
-	size: 'large',
+export const Disabled = Template.bind({});
+Disabled.args = {
+	disabled: true,
 	children: 'Button',
+};
+Disabled.argTypes = {
+	disabled: { table: { disable: true } },
 };

@@ -1,7 +1,8 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Themes }                             from 'app/providers/ThemeProvider';
 import React                                  from 'react';
-import { ThemeDecorator }                     from 'shared/config/storybook/ThemeDecorator';
+
+import { Themes }         from 'app/providers/ThemeProvider';
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator';
 
 import { AppLink } from './AppLink';
 
@@ -15,41 +16,33 @@ export default {
 
 const Template: ComponentStory<typeof AppLink> = (args) => <AppLink {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
-	color: 'primary',
-	children: 'AppLink',
+export const Default = Template.bind({});
+Default.args = {
+	children: 'Link',
 };
 
-export const PrimaryDark = Template.bind({});
-PrimaryDark.args = {
-	color: 'primary',
-	children: 'AppLink',
+export const Dark = Template.bind({});
+Dark.args = {
+	children: 'Link',
 };
-PrimaryDark.decorators = [ThemeDecorator(Themes.DARK)];
+Dark.decorators = [ThemeDecorator(Themes.DARK)];
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-	color: 'secondary',
-	children: 'AppLink',
-};
-
-export const SecondaryDark = Template.bind({});
-SecondaryDark.args = {
-	color: 'secondary',
-	children: 'AppLink',
-};
-SecondaryDark.decorators = [ThemeDecorator(Themes.DARK)];
-
-export const Text = Template.bind({});
-Text.args = {
-	color: 'text',
-	children: 'AppLink',
+export const Types: ComponentStory<typeof AppLink> = (args) => (
+	<>
+		<AppLink {...args} type="primary">primary</AppLink>
+		<AppLink {...args} type="secondary">secondary</AppLink>
+		<AppLink {...args} type="success">primary</AppLink>
+		<AppLink {...args} type="warning">warning</AppLink>
+		<AppLink {...args} type="info">info</AppLink>
+		<AppLink {...args} type="error">error</AppLink>
+	</>
+);
+Types.argTypes = {
+	type: { table: { disable: true } },
 };
 
-export const TextDark = Template.bind({});
-TextDark.args = {
-	color: 'text',
-	children: 'AppLink',
+export const TypesDark = Types.bind({});
+TypesDark.argTypes = {
+	type: { table: { disable: true } },
 };
-TextDark.decorators = [ThemeDecorator(Themes.DARK)];
+TypesDark.decorators = [ThemeDecorator(Themes.DARK)];

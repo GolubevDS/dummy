@@ -1,0 +1,43 @@
+.h1 {
+	font: var(--font-xxl);
+}
+
+.h2 {
+	font: var(--font-xl);
+}
+
+.subtitle {
+	font: var(--font-l);
+}
+
+.body1 {
+	font: var(--font-m);
+}
+
+.body2 {
+	font: var(--font-s);
+}
+
+.primary {
+	color: var(--primary-color);
+}
+
+.secondary {
+	color: var(--secondary-color);
+}
+
+.success {
+	color: var(--success-color);
+}
+
+.warning {
+	color: var(--warning-color);
+}
+
+.error {
+	color: var(--danger-color);
+}
+
+.info {
+	color: var(--info-color);
+}

@@ -1,15 +1,32 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 
 import { Button } from './Button';
 
 describe('Button', () => {
-	test('should render Button', () => {
-		render(<Button>foo</Button>);
-		expect(screen.getByText('foo')).toBeInTheDocument();
+	it('renders the button with the correct text', () => {
+		render(<Button>Click me</Button>);
+		expect(screen.getByText('Click me')).toBeInTheDocument();
 	});
 	
-	test('should render Button with variant outline', () => {
-		render(<Button variant="outline">foo</Button>);
-		expect(screen.getByText('foo')).toHaveClass('outline');
+	it('adds the "disabled" class when the button is disabled', () => {
+		render(<Button disabled>Click me</Button>);
+		expect(screen.getByText('Click me')).toHaveClass('disabled');
+	});
+	
+	it('adds the "outline" class when the variant is set to "outline"', () => {
+		render(<Button variant="outline">Click me</Button>);
+		expect(screen.getByText('Click me')).toHaveClass('outline');
+	});
+	
+	it('adds the "large" class when the size is set to "large"', () => {
+		render(<Button size="large">Click me</Button>);
+		expect(screen.getByText('Click me')).toHaveClass('large');
+	});
+	
+	it('calls the onClick callback when the button is clicked', () => {
+		const handleClick = jest.fn();
+		render(<Button onClick={handleClick}>Click me</Button>);
+		fireEvent.click(screen.getByText('Click me'));
+		expect(handleClick).toHaveBeenCalled();
 	});
 });

@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { FC, MouseEvent, ReactNode }           from 'react';
-import { classNames }                               from 'shared/lib/helpers/classNames';
-import { Portal }                                   from 'shared/ui/Portal';
+
+import { classNames } from 'shared/lib/helpers/classNames';
+import { Portal }     from 'shared/ui/Portal';
 
 import cls from './Modal.module.scss';
 

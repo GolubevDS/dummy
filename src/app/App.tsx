@@ -1,4 +1,5 @@
-import { Suspense }  from 'react';
+import { Suspense } from 'react';
+
 import { AppRouter } from 'app/providers/AppRouter';
 import { Navbar }    from 'widgets/Navbar';
 import { Sidebar }   from 'widgets/Sidebar';

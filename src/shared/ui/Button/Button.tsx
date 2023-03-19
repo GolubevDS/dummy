@@ -1,5 +1,6 @@
 import type { ButtonHTMLAttributes, FC } from 'react';
-import { classNames }                    from 'shared/lib/helpers/classNames';
+
+import { classNames } from 'shared/lib/helpers/classNames';
 
 import cls from './Button.module.scss';
 
@@ -15,14 +16,22 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button: FC<ButtonProps> = ({
 	children,
 	className,
+	disabled = false,
 	variant = 'contained',
 	size = 'medium',
 	...rest
 }) => {
+	const mods = {
+		[cls.disabled]: disabled,
+		[cls[variant]]: true,
+		[cls[size]]: true,
+	};
+	
 	return (
 		<button
 			{...rest}
-			className={classNames([cls.Button, cls[variant], cls[size], className])}
+			className={classNames([cls.Button, className], mods)}
+			disabled={disabled}
 		>
 			{children}
 		</button>

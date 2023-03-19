@@ -1,10 +1,12 @@
 import { useTranslation } from 'react-i18next';
 
+import { Typography } from 'shared/ui/Typography';
+
 const AboutPage = () => {
 	const { t } = useTranslation('about');
 	
 	return (
-		<h1>{t('title')}</h1>
+		<Typography variant="h1">{t('title')}</Typography>
 	);
 };
 

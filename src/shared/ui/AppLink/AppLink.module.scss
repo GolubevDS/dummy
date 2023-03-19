@@ -1,19 +1,11 @@
 .AppLink {
-	display: flex;
-	align-items: center;
 	transition: opacity var(--transition-shared);
 	font: var(--font-m);
+	color: var(--text-color);
 
 	svg {
 		height: var(--font-line-m);
 		width: var(--font-line-m);
-	}
-}
-
-.text {
-	color: var(--text-color);
-
-	svg {
 		fill: var(--text-color);
 	}
 
@@ -22,10 +14,7 @@
 	}
 }
 
-.primary {
-	color: var(--primary-color);
-}
-
-.secondary {
-	color: var(--secondary-color);
+.content {
+	display: flex;
+	align-items: center;
 }

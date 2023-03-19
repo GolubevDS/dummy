@@ -1,10 +1,11 @@
+import { LoginModal }            from 'features/AuthByUsername';
 import { useCallback, useState } from 'react';
 import type { FC }               from 'react';
 import { useTranslation }        from 'react-i18next';
-import { LoginModal }            from 'features/AuthByUsername';
-import { Button }                from 'shared/ui/Button';
-import { LanguageSwitcher }      from 'widgets/LanguageSwitcher';
-import { ThemeSwitcher }         from 'widgets/ThemeSwitcher';
+
+import { Button }           from 'shared/ui/Button';
+import { LanguageSwitcher } from 'widgets/LanguageSwitcher';
+import { ThemeSwitcher }    from 'widgets/ThemeSwitcher';
 
 import cls from './Navbar.module.scss';
 

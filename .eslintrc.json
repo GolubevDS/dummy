@@ -67,7 +67,38 @@
 		"import/order": [
 			"error",
 			{
+				"alphabetize": {
+					"order": "asc",
+					"caseInsensitive": true
+				},
 				"newlines-between": "always",
+				"pathGroups": [
+					{
+						"pattern": "app/**",
+						"group": "internal"
+					},
+					{
+						"pattern": "pages/**",
+						"group": "internal"
+					},
+					{
+						"pattern": "widgets/**",
+						"group": "internal"
+					},
+					{
+						"pattern": "feature/**",
+						"group": "internal"
+					},
+					{
+						"pattern": "entities/**",
+						"group": "internal"
+					},
+					{
+						"pattern": "shared/**",
+						"group": "internal"
+					}
+				],
+				"pathGroupsExcludedImportTypes": ["builtin"],
 				"groups": [
 					"builtin",
 					"external",
@@ -89,7 +120,7 @@
 	"ignorePatterns": ["build", "node_modules"],
 	"overrides": [
 		{
-			"files": ["**/src/**/*.test.{ts,tsx}"],
+			"files": ["**/src/**/*.test.{ts,tsx}", "**/src/**/*.stories.{ts,tsx}"],
 			"rules": {
 				"i18next/no-literal-string": "off"
 			}

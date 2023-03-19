@@ -1,6 +1,7 @@
 import type { FC }        from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button }         from 'shared/ui/Button';
+
+import { Button } from 'shared/ui/Button';
 
 import cls from './ErrorPage.module.scss';
 

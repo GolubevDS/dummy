@@ -1,7 +1,8 @@
-import React                                  from 'react';
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Themes }                             from 'app/providers/ThemeProvider';
-import { ThemeDecorator }                     from 'shared/config/storybook/ThemeDecorator';
+import React                                  from 'react';
+
+import { Themes }         from 'app/providers/ThemeProvider';
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator';
 
 import { Modal } from './Modal';
 

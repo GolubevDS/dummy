@@ -1,7 +1,8 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
 import React                                  from 'react';
-import { Themes }                             from 'app/providers/ThemeProvider';
-import { ThemeDecorator }                     from 'shared/config/storybook/ThemeDecorator';
+
+import { Themes }         from 'app/providers/ThemeProvider';
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator';
 
 import { Sidebar } from './Sidebar';
 
