@@ -1,14 +1,18 @@
 {
+	"error": {
+		"unknown": "An unexpected error has occurred",
+		"login": "Incorrect username or password"
+	},
 	"link": {
 		"main": "Main",
 		"about": "About"
 	},
 	"language": "English",
 	"not-found": "Page not found",
-	"error": "An unexpected error has occurred",
 	"reload-page": "Reload page",
 	"sidebar-switcher": "Toggle",
 	"sign-in": "Sign in",
+	"sign-out": "Sign out",
 	"username": "Username",
 	"password": "Password"
 }

@@ -34,6 +34,8 @@
 
 .icon {
 	margin-right: 12px;
+	width: 24px;
+	height: 24px;
 
 	svg {
 		width: 24px;
@@ -42,6 +44,11 @@
 }
 
 .content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 24px;
+
 	& > *:nth-child(2) {
 		margin-top: 8px;
 	}

@@ -1,8 +1,8 @@
 import { configureStore }         from '@reduxjs/toolkit';
 import type { ReducersMapObject } from '@reduxjs/toolkit';
-import { loginReducer }           from 'features/AuthByUsername';
 
-import { userReducer } from 'entities/User';
+import { userReducer }  from 'entities/User';
+import { loginReducer } from 'features/AuthByUsername';
 
 import type { StateSchema } from './StateSchema';
 

@@ -2,6 +2,7 @@ import { memo, useCallback }        from 'react';
 import { useTranslation }           from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 
+import { Alert }      from 'shared/ui/Alert';
 import { Button }     from 'shared/ui/Button';
 import { Input }      from 'shared/ui/Input';
 import { Typography } from 'shared/ui/Typography';
@@ -32,7 +33,14 @@ export const LoginForm = memo(function LoginForm() {
 	return (
 		<div className={cls.LoginForm}>
 			<Typography variant="h2">{t('sign-in')}</Typography>
-			{error && <Typography variant="body1">{error}</Typography>}
+			{error && (
+				<Alert
+					className={cls.alert}
+					description={error}
+					showIcon
+					type="error"
+				/>
+			)}
 			<Input
 				className={cls.input}
 				placeholder={t('username')}

@@ -86,7 +86,7 @@
 						"group": "internal"
 					},
 					{
-						"pattern": "feature/**",
+						"pattern": "features/**",
 						"group": "internal"
 					},
 					{

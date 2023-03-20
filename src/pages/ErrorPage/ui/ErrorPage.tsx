@@ -14,7 +14,7 @@ export const ErrorPage: FC = () => {
 	
 	return (
 		<div className={cls.ErrorPage}>
-			<h2 className={cls.title}>{t('error')}</h2>
+			<h2 className={cls.title}>{t('error.unknown')}</h2>
 			<Button onClick={reloadPage}>
 				{t('reload-page')}
 			</Button>
