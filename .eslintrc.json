@@ -63,6 +63,7 @@
 		"semi": ["warn", "always"],
 		"import/no-named-as-default-member": "off",
 		"@typescript-eslint/no-unused-vars": [1, { "vars": "all", "argsIgnorePattern": "^_" }],
+		"@typescript-eslint/ban-ts-comment": [1],
 		"no-multiple-empty-lines": ["error", { "max": 1 }],
 		"import/order": [
 			"error",

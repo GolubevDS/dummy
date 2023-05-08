@@ -17,7 +17,9 @@ export const SignIn = () => {
 			<Button onClick={onToggleModal}>
 				{t('sign-in')}
 			</Button>
-			<LoginModal isOpen={isAuthModal} onClose={onToggleModal} />
+			{isAuthModal && (
+				<LoginModal isOpen={isAuthModal} onClose={onToggleModal} />
+			)}
 		</>
 	);
 };

@@ -1,4 +1,7 @@
-import { Modal } from 'shared/ui/Modal';
+import { Suspense } from 'react';
+
+import { Modal }   from 'shared/ui/Modal';
+import { Spinner } from 'shared/ui/Spinner';
 
 import { LoginForm } from '../LoginForm';
 
@@ -13,7 +16,9 @@ export const LoginModal = ({ isOpen, onClose }: LoginModalProps) => {
 			isOpen={isOpen}
 			onClose={onClose}
 		>
-			<LoginForm />
+			<Suspense fallback={<Spinner />}>
+				<LoginForm />
+			</Suspense>
 		</Modal>
 	);
 };

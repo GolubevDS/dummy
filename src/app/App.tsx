@@ -4,6 +4,7 @@ import { useDispatch }         from 'react-redux';
 import { AppRouter }   from 'app/providers/AppRouter';
 import { userActions } from 'entities/User';
 import { Navbar }      from 'widgets/Navbar';
+import { PageLoader }  from 'widgets/PageLoader';
 import { Sidebar }     from 'widgets/Sidebar';
 
 import './styles/index.scss';
@@ -16,7 +17,7 @@ export const App = () => {
 	}, [dispatch]);
 	
 	return (
-		<Suspense fallback="Loading...">
+		<Suspense fallback={<PageLoader />}>
 			<div className="content-page">
 				<Sidebar />
 				<div>
