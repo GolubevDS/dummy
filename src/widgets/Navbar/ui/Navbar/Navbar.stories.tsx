@@ -18,7 +18,7 @@ export const Default = Template.bind({});
 Default.decorators = [StoreDecorator({})];
 
 export const SignOut = Template.bind({});
-SignOut.decorators = [StoreDecorator({ user: { authData: { id: 1, name: 'Foo' } } })];
+SignOut.decorators = [StoreDecorator({ user: { authData: { id: 1, username: 'Foo' } } })];
 
 export const Dark = Template.bind({});
 Dark.decorators = [ThemeDecorator(Themes.DARK), StoreDecorator({})];
