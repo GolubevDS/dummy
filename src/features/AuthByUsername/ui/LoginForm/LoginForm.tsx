@@ -1,8 +1,9 @@
-import { memo, useCallback }        from 'react';
-import { useTranslation }           from 'react-i18next';
-import { useDispatch, useSelector } from 'react-redux';
+import { memo, useCallback } from 'react';
+import { useTranslation }    from 'react-i18next';
+import { useSelector }       from 'react-redux';
 
 import { DynamicModuleLoader } from 'shared/lib/components/DynamicModuleLoader';
+import { useAppDispatch }      from 'shared/lib/hooks/useAppDispatch';
 import { Alert }               from 'shared/ui/Alert';
 import { Button }              from 'shared/ui/Button';
 import { Input }               from 'shared/ui/Input';
@@ -20,7 +21,7 @@ import cls from './LoginForm.module.scss';
 const LoginForm = memo(() => {
 	const 
 		{ t } = useTranslation(),
-		dispatch = useDispatch(),
+		dispatch = useAppDispatch(),
 		username = useSelector(getLoginUsername),
 		password = useSelector(getLoginPassword),
 		isLoading = useSelector(getLoginIsLoading),

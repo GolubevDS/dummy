@@ -1,8 +1,9 @@
-import { Reducer }               from '@reduxjs/toolkit';
-import { ReactNode, useEffect }  from 'react';
-import { useDispatch, useStore } from 'react-redux';
+import { Reducer }              from '@reduxjs/toolkit';
+import { ReactNode, useEffect } from 'react';
+import { useStore }             from 'react-redux';
 
 import { ReduxStoreWithReducerManager, StateSchemaKey } from 'app/providers/StoreProvider';
+import { useAppDispatch }                               from 'shared/lib/hooks/useAppDispatch';
 
 interface DynamicModuleLoaderProps {
 	children: ReactNode
@@ -12,7 +13,7 @@ interface DynamicModuleLoaderProps {
 
 export const DynamicModuleLoader = ({children, name, reducer}: DynamicModuleLoaderProps) => {
 	const
-		dispatch = useDispatch(),
+		dispatch = useAppDispatch(),
 		store = useStore() as ReduxStoreWithReducerManager;
 		
 	useEffect(() => {
@@ -23,7 +24,7 @@ export const DynamicModuleLoader = ({children, name, reducer}: DynamicModuleLoad
 			store.reducerManager.remove(name);
 			dispatch({ type: `@DESTROY ${name} reducer` });
 		};
-	}, []);
+	}, [dispatch, name, reducer, store.reducerManager]);
 	
 	return (
 		<>
