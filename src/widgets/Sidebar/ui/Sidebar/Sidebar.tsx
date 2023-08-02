@@ -1,20 +1,18 @@
-import { useState }       from 'react';
-import type { FC }        from 'react';
-import { useTranslation } from 'react-i18next';
+import type { FC }  from 'react';
+import { useState } from 'react';
 
-import About          from 'shared/assets/icons/about.svg';
 import ArrowBack      from 'shared/assets/icons/arrow-back.svg';
 import ArrowForward   from 'shared/assets/icons/arrow-forward.svg';
-import Home           from 'shared/assets/icons/home.svg';
 import Logo           from 'shared/assets/icons/logo.svg';
 import { classNames } from 'shared/lib/helpers/classNames';
-import { AppLink }    from 'shared/ui/AppLink';
 import { Button }     from 'shared/ui/Button';
+
+import { SidebarItemsList } from '../../model/items';
+import { SidebarItem }      from '../SidebarItem';
 
 import cls from './Sidebar.module.scss';
 
 export const Sidebar: FC = () => {
-	const { t } = useTranslation();
 	const [collapsed, setCollapsed] = useState(false);
 	
 	const toggle = () => {
@@ -30,14 +28,14 @@ export const Sidebar: FC = () => {
 				<Logo />
 			</div>
 			<div className={cls.links}>
-				<AppLink to="/">
-					<Home />
-					<span>{t('link.main')}</span>
-				</AppLink>
-				<AppLink to="/about">
-					<About />
-					<span>{t('link.about')}</span>
-				</AppLink>
+				{SidebarItemsList.map(({ Icon, path, i18Key }) => (
+					<SidebarItem
+						i18Key={i18Key}
+						Icon={Icon}
+						key={i18Key}
+						path={path}
+					/>
+				))}
 			</div>
 			<Button
 				className={cls.collapsedToggle}

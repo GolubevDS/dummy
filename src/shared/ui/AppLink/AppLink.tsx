@@ -1,5 +1,7 @@
-import { FC }              from 'react';
-import { Link, LinkProps } from 'react-router-dom';
+import { memo }           from 'react';
+import type { FC }        from 'react';
+import { Link }           from 'react-router-dom';
+import type { LinkProps } from 'react-router-dom';
 
 import { classNames } from 'shared/lib/helpers/classNames';
 import type { Types } from 'shared/ui/types';
@@ -12,7 +14,7 @@ interface AppLinkProps extends LinkProps {
 	type?: Types;
 }
 
-export const AppLink: FC<AppLinkProps> = ({
+export const AppLink = memo(({
 	className,
 	children,
 	to,
@@ -30,4 +32,6 @@ export const AppLink: FC<AppLinkProps> = ({
 			</Typography>
 		</Link>
 	);
-};
+});
+
+AppLink.displayName = 'AppLink';

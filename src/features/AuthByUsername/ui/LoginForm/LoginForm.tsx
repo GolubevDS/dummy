@@ -3,6 +3,7 @@ import { useTranslation }    from 'react-i18next';
 import { useSelector }       from 'react-redux';
 
 import { DynamicModuleLoader } from 'shared/lib/components/DynamicModuleLoader';
+import { ReducersList }        from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch }      from 'shared/lib/hooks/useAppDispatch';
 import { Alert }               from 'shared/ui/Alert';
 import { Button }              from 'shared/ui/Button';
@@ -17,6 +18,10 @@ import { loginByUsername }            from '../../model/services/loginByUsername
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
 
 import cls from './LoginForm.module.scss';
+
+const reducers: ReducersList = {
+	loginForm: loginReducer,
+};
 
 const LoginForm = memo(() => {
 	const 
@@ -40,7 +45,7 @@ const LoginForm = memo(() => {
 	}, [dispatch, password, username]);
 	
 	return (
-		<DynamicModuleLoader name="loginForm" reducer={loginReducer}>
+		<DynamicModuleLoader name="loginForm" reducers={reducers} removeAfterUnmount>
 			<div className={cls.LoginForm}>
 				<Typography variant="h2">{t('sign-in')}</Typography>
 				{error && (

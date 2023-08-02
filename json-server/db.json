@@ -28,10 +28,9 @@
 	"profile": {
 		"first": "Dmitrii",
 		"lastname": "Golubev",
-		"age": 23,
+		"age": 24,
 		"currency": "USD",
-		"country": "Thailand",
-		"city": "Phuket",
+		"country": "Bali",
 		"username": "admin",
 		"avatar": "https://i.seadn.io/gcs/files/2afb1b800cb18bd0592e0f08145cca09.png?auto=format&dpr=1&w=1000"
 	}

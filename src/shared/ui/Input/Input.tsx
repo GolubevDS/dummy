@@ -1,4 +1,5 @@
-import type { ChangeEvent, FC, InputHTMLAttributes } from 'react';
+import { memo }                                  from 'react';
+import type { ChangeEvent, InputHTMLAttributes } from 'react';
 
 import { classNames } from 'shared/lib/helpers/classNames';
 
@@ -10,11 +11,11 @@ interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'value'
 	onChange?: (value: string) => void;
 }
 
-export const Input: FC<InputProps> = ({
+export const Input = memo(({
 	className,
 	onChange,
 	...restProps
-}) => {
+}: InputProps) => {
 	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
 		onChange?.(e.target.value);
 	};
@@ -27,4 +28,6 @@ export const Input: FC<InputProps> = ({
 			/>
 		</div>
 	);
-};
+});
+
+Input.displayName = 'Input';
